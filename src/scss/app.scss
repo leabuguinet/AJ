@@ -3,6 +3,29 @@
 @use 'sass:math';
 @import 'variables';
 
+@font-face {
+    font-family: 'glimmer_of_lightregular';
+    src: url('./../../fonts/glimmer_of_light-webfont.woff2') format('woff2'),
+         url('./../../fonts/glimmer_of_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'signpainter_housescriptRg';
+    src: url('./../../fonts/signpainter_housescript_regular-webfont.woff2') format('woff2'),
+         url('./../../fonts/signpainter_housescript_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body, a {
+	font-family: 'signpainter_housescriptRg';
+}
+
+
 * {
   margin: 0 ;
   box-sizing: border-box;
@@ -16,9 +39,11 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+}
+
 html, body {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
     color: black;
 }
 
@@ -76,30 +101,32 @@ header {
         width: 100%;
         //transform: scale(1.2);
         //transform-origin: center;
-        
+        //shape-rendering: optimizeSpeed;
 
         .cls-1 {
-            //stroke-dasharray: 497;
-           //stroke-dashoffset: 0;
-            //animation: test ease-out 4s forwards;
+            stroke-dasharray: 400;
+            stroke-dashoffset: 400;
+            //animation: test ease-out 5s 2s forwards;
+
+            fill:none;
+            stroke:#1a301b;
+            stroke-miterlimit:10;
+            stroke-width:2.5px;
 
             @include min($bp-tablet-px){
                 stroke-width: 1px;
             }
         }
-
-
-       
+    }
+    
+    .verriere-js {
+        animation: verriere-anim ease-out 2s forwards;
     }
 
-    @keyframes test{
+    @keyframes verriere-anim{
 
-        from{
-            stroke-dashoffset: 0
-        }
         to {
-            stroke-dashoffset: 1000;
-            stroke-dasharray: 497;
+            stroke-dashoffset: 0;
         }
     }
 
@@ -166,14 +193,34 @@ header {
         }
     }
 
-    .climbingplant {
-        position: absolute;
-        max-width: 300px;
-    }
-    
+
 
     
 }
+
+main {
+    position: relative;
+    overflow: hidden;
+    
+    .climbingplant {
+        position: absolute;
+        max-width: 300px;
+        bottom: 50%;
+        left: -20%;
+
+        @include min($bp-mobileXL-px){ 
+            left: -10%;
+        }
+        @include min($bp-tablet-px){ 
+            left: -5%;
+            max-width: 500px;
+            bottom: 0;
+        }
+    }
+
+   
+}
+
 
 nav {
     height: 100vh;
@@ -182,5 +229,36 @@ nav {
     text-align: center;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
     gap: 3rem;
+    max-width: fit-content;
+
+    a {
+        color: black;
+        font-size: 2rem;
+        position: relative;
+        width: 100%;
+    }
+
+    a:hover {
+        color: #000;
+      }
+      
+      a::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      
+      a:hover::before {
+        transform: scaleX(1);
+      }
+
 }
