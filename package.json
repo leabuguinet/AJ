@@ -25,6 +25,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gsap": "^3.11.5",
     "swiper": "^8.4.4"
   }
 }

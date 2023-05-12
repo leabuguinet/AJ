@@ -1,0 +1,293 @@
+@import url(https://fonts.googleapis.com/css?family=Ek+Mukta:200);
+
+
+$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+$mukta: 'Ek Mukta', sans-serif;;
+
+$menuItems: 2;
+
+body {
+    margin: 0;
+    line-height: 1.4;
+    //background: #E1E1E1;
+}
+
+.programme {
+    position: relative;
+    display: block;
+    
+
+    .header {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        height: 50px;
+        width: 100%;
+        background: rgba(#024419,0.8);
+        overflow: hidden;
+        transition: all 0.5s ease-out /* background 1s ease-out */;
+        transition-delay: 0.2s;
+        z-index: 1;
+        
+        .burger-container {
+            position: relative;
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            cursor: pointer;
+            transform: rotate(0deg);
+            transition: all 0.3s $cubic;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            
+            #burger {
+                width: 18px;
+                height: 8px;
+                position: relative;
+                display: block;
+                margin: -4px auto 0;
+                top: 50%;
+                .bar {
+                    width: 100%;
+                    height: 1px;
+                    display: block;
+                    position: relative;
+                    background: #FFF;
+                    transition: all 0.3s $cubic;
+                    transition-delay: 0s;
+                    &.topBar {
+                        transform: translateY(0px) rotate(0deg);
+                    }
+                    &.btmBar {
+                        transform: translateY(6px) rotate(0deg);
+                    }
+                }
+            }
+        }
+
+
+        ul.menu {
+            position: relative;
+            display: none;
+            padding: 0px 48px 0;
+            list-style: none;
+            li.menu-item {
+                border-bottom: 1px solid #ffffff;
+                margin-top: 5px;
+                transform: scale(1.15) translateY(-30px);
+                opacity: 0;
+                transition: transform 0.5s $cubic, opacity 0.6s $cubic;
+                @for $i from 1 through $menuItems {
+                    &:nth-child(#{$i}) {
+                        transition-delay: #{0.56 - ($i * 0.07)}s;
+                    }
+                }
+                a {
+                    display: block;
+                    position: relative;
+                    color: #FFF;
+                    //font-family: $mukta;
+                    //font-weight: 100;
+                    text-decoration: none;
+                    font-size: 2rem;
+                    line-height: 2.35;
+                    font-weight: 200;
+                    width: 100%;
+                }
+            }
+        }
+
+        &.menu-opened {
+
+            ul.menu{
+                display: block;
+            }
+            display: block;
+            height: 100%;
+            background-color: #012f08;
+            transition: all 0.3s ease-in/* , background 0.5s ease-in */;
+            transition-delay: 0.25s;
+            .burger-container { 
+                transform: rotate(90deg);
+                #burger {
+                    .bar {
+                        transition: all 0.4s $cubic;
+                        transition-delay: 0.2s;
+                        &.topBar {
+                            transform: translateY(4px) rotate(45deg);
+                        }
+                        &.btmBar {
+                            transform: translateY(3px) rotate(-45deg);
+                        }
+                    }
+                }
+            }
+            ul.menu {
+                li.menu-item {
+                    transform: scale(1) translateY(0px);
+                    opacity: 1;
+                    @for $i from 1 through $menuItems {
+                        &:nth-child(#{$i}) {
+                            transition-delay: #{0.07 * $i+0.2}s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        font-family: $mukta;
+        padding: 67px 4% 0;
+        width: 100%;
+    
+        text-align: justify;
+        //overflow: scroll;
+        //max-height: 100%;
+        &::-webkit-scrollbar  {
+            display: none;
+        }
+
+        h1{
+            font-family: 'glimmer_of_lightregular';
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+
+        h2 {
+            //margin-bottom: 20px;
+            letter-spacing: 1px;
+            font-family: 'signpainter_housescriptRg';
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            //text-align: center;
+            font-family: 'glimmer_of_lightregular';
+            margin: 25px 0;
+            font-size: 1.2rem;
+
+            @include min($bp-tablet-px){
+                text-align: center;
+            }
+        }
+
+
+        .events {
+            display: flex;
+            flex-direction: column;
+            //align-items: center;
+
+            @include min($bp-tablet-px){
+                align-items: center;
+            }
+        }
+
+        .events.last {
+            margin-bottom: 2rem;
+        }
+
+
+        .event-box {
+           
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            img{
+                width: 50px;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+
+            p.time, p.event, p.location {
+                font-family: 'glimmer_of_lightregular';
+            }
+
+            .event-data {
+                margin-bottom: 2rem;
+            }
+
+            @include min($bp-tablet-px){
+                width: 60%;
+            }
+        }
+
+        .flower {
+            max-width: 200px;
+            min-width: 50px;
+            width: 10%;
+            margin: 2rem calc(50% - 5%);
+   
+        }
+
+        .other {
+
+            h3 {
+                @include min($bp-tablet-px){ 
+                    margin-top: 8rem;
+                }
+            }
+
+            p {
+                font-family: 'signpainter_housescriptRg';
+                font-size: 1.3rem;
+                text-align: center;
+            }
+        }
+        
+        .guirlande {
+            background-image: url("../../dist/guirlande.png");
+            background-size: contain;
+            width: 100%;
+            height: 50px;
+            background-repeat: no-repeat;
+            background-position: center;
+
+
+            @include min($bp-tablet-px){
+                background-repeat: repeat;
+                height: 60px;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+    @media(max-width: 600px) {
+        width: 100%;
+        //height: 100vh;
+        padding: 0 1rem;
+        border-radius: 0px;
+        .header {
+            position: fixed;
+        }
+    }
+
+    .branches {
+        max-width: 200px;
+        width: 200px;
+        transform: rotate(-90deg);
+    }
+
+    .day2 {
+        position: relative;
+
+        &::before {
+            content:"";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-image: url("../../dist/liere.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            left: 88%;
+            bottom: 0px;
+
+        }
+    }
+}
