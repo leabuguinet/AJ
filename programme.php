@@ -67,13 +67,25 @@
                     <p class='item location'></p>
                 </div>
             </div>
+
+            <div class="event-box">
+                <div>
+                    <img src="assets/gardentools.png" alt="">
+                </div>
+
+                <div class="event-data">
+                    <p class='item time'>20h</p>
+                    <p class='item event'>Dinner</p>
+                    <p class='item location'></p>
+                </div>
+            </div>
         </div>
         
 
  
         <h3 class="day2">Dimanche 3 septembre 2023</h3>
 
-        <div class="events last">
+        <div class="events last"> 
             <div class="event-box">
                 <div>
                     <img src="assets/table.png" alt="">

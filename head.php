@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="dist/css/app.min.css">
 
-        <meta name="robots" content="noindex">.
+        <meta name="robots" content="noindex">
 
     </head>
 
