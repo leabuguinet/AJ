@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 
+
 const programmeAnim = {
 
     init () {
@@ -33,6 +34,7 @@ const programmeAnim = {
             stagger: 0.1
         }, "0.5") */
 
+        
 /// Create a master timeline
 const masterTl = gsap.timeline();
 
@@ -42,26 +44,26 @@ const eventBoxes = document.querySelectorAll('.event-box');
 // Loop through each element and create a timeline for it
 eventBoxes.forEach((eventBox, index) => {
   const tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: eventBox,
-      start: "top 90%",
-      scrub: false,
+    //scrollTrigger: {
+      //trigger: eventBox,
+      //start: "top 90%",
+      //scrub: false,
       //markers: true,
-    }
+    //}
   });
 
   tl
     .from(eventBox, {
-      //opacity: 0,
-      x: -500, 
-      duration: 1.5,
-      //stagger: 1.5
+      opacity: 0,
+      y: -100, 
+      duration: 0.6,
+      stagger: 2.3
     })
     .from(eventBox.querySelectorAll('.item'), {
       opacity: 0,
-      duration: 3,
+      duration: 0.4,
       stagger: 0.5
-    }, "0.8");
+    }, "0.5");
 
   // Add the individual timeline to the master timeline with a stagger
   masterTl.add(tl, index * 2);

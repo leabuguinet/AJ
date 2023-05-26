@@ -1,0 +1,217 @@
+.homepage-header {
+    background-color:rgb(255, 255, 255) ;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+    }
+    .logo{
+        margin: 0 auto;
+        width: 18%;
+        max-width: 120px;
+        z-index: 1000;
+        animation : animlogo 2s forwards ease-in-out
+    }
+
+    @keyframes animlogo {
+        from {
+           opacity: 0; 
+        }
+        to {
+            opacity: 1;
+        }
+        
+    }
+
+    .arrow img {
+        width: 45px;
+    }
+
+    .arrow {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10%;
+        z-index: 1000;
+    }
+
+
+    .verriere {
+        top: -10px;
+        position: absolute;
+        //max-height: 100vh;
+        width: 100%;
+        //transform: scale(1.2);
+        //transform-origin: center;
+        //shape-rendering: optimizeSpeed;
+
+        .cls-1 {
+            stroke-dasharray: 400;
+            stroke-dashoffset: 400;
+            //animation: test ease-out 5s 2s forwards;
+
+            fill:none;
+            stroke:#1a301b;
+            stroke-miterlimit:10;
+            stroke-width:2.5px;
+
+            @include min($bp-tablet-px){
+                stroke-width: 1px;
+            }
+        }
+    }
+    
+    .verriere-js {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        animation: verriere-anim 2s ease forwards;
+        will-change: transform;
+    }
+
+    @keyframes verriere-anim{
+
+        to {
+            stroke-dashoffset: 0;
+        }
+    }
+
+    .palmier {
+        position: absolute;
+        bottom: 0;
+        left: 20%;
+        height: 94vh;
+
+        @include min($bp-tablet-px){
+            left: 50%
+        }
+    }
+
+    .plantgodown {
+        position: absolute;
+        width: 70%;
+        max-width: 470px;
+        left: 0;
+
+    }
+
+    .leafdown {
+        position: absolute;
+        bottom: 0;
+        max-width: 710px;
+        z-index: 50;
+    }
+
+    .leafdownright {
+        position: absolute;
+        bottom: 0;
+        max-width: 100px;
+        z-index: 50;
+        right: 0;
+        @include min($bp-tablet-px){
+            max-width: 200px;
+        }
+    }
+
+    .orangeflower {
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+        max-width: 160px;
+        left: -10px;
+
+        @include min($bp-tablet-px){
+            max-width: 300px;
+        }
+    }
+
+    .whiteflowerleaf {
+        position: absolute;
+        bottom: 0;
+        z-index: 10;
+        right: 0;
+        max-width: 160px;
+
+        @include min($bp-tablet-px){
+            right: 10%;
+            bottom: -30px;
+            max-width: 200px;
+        }
+    }
+
+
+
+    
+}
+
+main {
+    position: relative;
+    overflow: hidden;
+    
+    .climbingplant {
+        position: absolute;
+        max-width: 300px;
+        bottom: 50%;
+        left: -20%;
+
+        @include min($bp-mobileXL-px){ 
+            left: -10%;
+        }
+        @include min($bp-tablet-px){ 
+            left: -5%;
+            max-width: 500px;
+            bottom: 0;
+        }
+    }
+
+   
+}
+
+
+nav {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    gap: 3rem;
+    max-width: fit-content;
+
+    a {
+        color: black;
+        font-size: 2rem;
+        position: relative;
+        width: 100%;
+    }
+
+    a:hover {
+        color: #000;
+      }
+      
+      a::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      
+      a:hover::before {
+        transform: scaleX(1);
+      }
+
+}

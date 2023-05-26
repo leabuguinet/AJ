@@ -3,8 +3,6 @@ import programmeAnim from "./animation";
 
 programmeAnim.init();
 
-//console.log('first')
-
 let homepage = document.querySelector('.homepage-header');
 if(homepage){
 
@@ -29,9 +27,9 @@ if(homepage){
 }
 
 
-let programmePage = document.querySelector('.programme');
+let pageWithMenu = document.querySelector('.pagewmenu');
 
-if(programmePage){
+if(pageWithMenu){
     let burger = document.querySelector('.burger-container');
     let header = document.querySelector('.header');
     

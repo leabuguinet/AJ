@@ -1,0 +1,66 @@
+
+.hebergement {
+    position: relative;
+    display: block;
+
+    .content {
+        padding: 67px 4% 0;
+        width: 100%;
+        margin-bottom: 5rem;
+
+        h1{
+            font-family: 'glimmer_of_lightregular';
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+        }
+
+        h4, p {
+            font-family: "Ek Mukta",sans-serif;
+        }
+
+        img.camping {
+            width: 100%;
+            height: 15vh;
+            object-fit: contain;
+            margin-top: 20px;
+        }
+
+        .hotel-box {
+            margin: 2rem 1rem ;
+
+            a {
+                font-size: 1.2rem;
+                text-decoration: none;
+                color: #012f08;
+                position: relative;
+                //margin-left: 15px;
+                margin-top: 10px;
+            }
+
+            a::before {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                background-color: #012f08;
+                transform: scaleX(0);
+                transition: transform 0.3s ease;
+              }
+              
+              a:hover::before {
+                transform: scaleX(1);
+              }
+        }
+    }
+}

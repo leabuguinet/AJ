@@ -30,6 +30,7 @@
         <img class="climbingplant" src="assets/climbingplant.svg" alt="" />
         <nav id="menu">
             <a href="/AJ/programme.php">Programme</a>
+            <a href="/AJ/hebergement.php">Hébergement</a>
             <a href="#">À visiter</a>
         </nav>
 
