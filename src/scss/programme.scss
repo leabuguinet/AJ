@@ -45,24 +45,23 @@ body {
             font-family: 'glimmer_of_lightregular';
             text-align: center;
             margin-bottom: 15px;
+            font-size : font-clamp(35, 40, $bp-tablet, $bp-large)
         }
-
-
-
 
         h2 {
             //margin-bottom: 20px;
             letter-spacing: 1px;
             font-family: 'signpainter_housescriptRg';
             text-align: center;
-            font-size: 1.5rem;
+            font-size : font-clamp(25, 32, $bp-tablet, $bp-large)
         }
 
         h3 {
             //text-align: center;
             font-family: 'glimmer_of_lightregular';
             margin: 25px 0;
-            font-size: 1.2rem;
+            font-size: font-clamp(20, 30, $bp-tablet, $bp-large);
+            text-align: left;
 
             @include min($bp-tablet-px){
                 text-align: center;
@@ -98,7 +97,7 @@ body {
             }
 
             p {
-                font-size: 1rem;
+                font-size: font-clamp(17, 22, $bp-tablet, $bp-large);
                 line-height: 1.5;
                 text-align: left;
             }
@@ -138,7 +137,7 @@ body {
 
             p {
                 font-family: 'signpainter_housescriptRg';
-                font-size: 1.3rem;
+                font-size: font-clamp(25, 30, $bp-tablet, $bp-large);
                 text-align: center;
             }
         }

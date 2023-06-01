@@ -99,7 +99,7 @@
                     <p class='item event'>Food Truck</p>
                     <p class='item location'>Gîte "Les Fonteneilles"</p> 
                     <p class='item'>2 Les Fonteneilles, 36200 Bouesse</p>
-                    <p class='item'>Journée détente : pétanque, terrain de foot, tennis de table, molki et piscine à disposition !</p>
+                    <p class='item'>Journée détente : pétanque, terrain de foot, tennis de table, molkky et piscine à disposition&nbsp;!</p>
                 </div>
             </div>
         </div>  
@@ -120,7 +120,7 @@
             
             <img class="flower" src="assets/monstera.png" alt="">
 
-            <p>Attention : pas de babysitter, les enfants seront sous la surveillance de leurs parents !</p> 
+            <p>Attention : pas de babysitter, les enfants seront sous la surveillance de leurs parents.</p> 
 
 
             <img class="flower" src="assets/exoticflower.png" alt="">

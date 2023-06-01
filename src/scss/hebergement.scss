@@ -12,18 +12,20 @@
             font-family: 'glimmer_of_lightregular';
             text-align: center;
             margin-bottom: 30px;
+            font-size : font-clamp(35, 40, $bp-tablet, $bp-large)
         }
 
         h2 {
-            font-size: 1.6rem;
+            font-size : font-clamp(30, 35, $bp-tablet, $bp-large)
         }
 
         h3 {
-            font-size: 1.4rem;
+            font-size: font-clamp(25, 30, $bp-tablet, $bp-large);
         }
 
         h4, p {
             font-family: "Ek Mukta",sans-serif;
+            font-size: font-clamp(17, 22, $bp-tablet, $bp-large);
         }
 
         img.camping {
@@ -37,7 +39,7 @@
             margin: 2rem 1rem ;
 
             a {
-                font-size: 1.2rem;
+                font-size: font-clamp(20, 25, $bp-tablet, $bp-large);
                 text-decoration: none;
                 color: #012f08;
                 position: relative;
