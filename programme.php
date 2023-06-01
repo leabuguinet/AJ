@@ -19,7 +19,7 @@
         <ul class="menu">
         <li class="menu-item"><a href="/AJ/programme.php">Programme</a></li>
         <li class="menu-item"><a href="/AJ/hebergement.php">Hébergement</a></li>
-        <li class="menu-item"><a href="#">À visiter</a></li>
+        <li class="menu-item"><a href="/AJ/visiter.php">À visiter</a></li>
         </ul>
 
     </div>

@@ -7,28 +7,56 @@
         padding: 67px 4% 0;
         width: 100%;
         margin-bottom: 5rem;
+        
+
+        @include min($bp-tablet-px){ 
+            max-width: 1000px;
+            margin: 0 auto;
+            width: unset;
+        }
 
         h1{
             font-family: 'glimmer_of_lightregular';
             text-align: center;
             margin-bottom: 30px;
+            
+            font-size : font-clamp(35, 40, $bp-tablet, $bp-large)
         }
 
         h2 {
-            font-size: 1.6rem;
+            font-size : font-clamp(30, 35, $bp-tablet, $bp-large)
         }
 
         h3 {
-            font-size: 1.4rem;
+            font-size: font-clamp(25, 30, $bp-tablet, $bp-large);
+            text-align: left;
+            margin-bottom: 1rem;
         }
 
-        h4, p {
+        p {
             font-family: "Ek Mukta",sans-serif;
+            font-size: font-clamp(17, 22, $bp-tablet, $bp-large);
+            margin-bottom: 1rem;
+        }
+
+
+        .visit.argenton {
+            width: 100%;
+            margin-top: 20px;
+            max-width: 500px;
+            max-height: 500px;
+            object-fit: contain;
         }
 
 
         .visit-box {
             margin: 2rem 1rem ;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            //align-content: center;
 
             a {
                 font-size: 1.2rem;

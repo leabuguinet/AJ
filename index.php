@@ -31,7 +31,7 @@
         <nav id="menu">
             <a href="/AJ/programme.php">Programme</a>
             <a href="/AJ/hebergement.php">Hébergement</a>
-            <a href="#">À visiter</a>
+            <a href="/AJ/visiter.php">À visiter</a>
         </nav>
 
     </main>

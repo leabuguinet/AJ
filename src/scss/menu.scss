@@ -23,23 +23,27 @@ $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
         position: relative;
         display: inline-block;
         height: 50px;
-        width: 50px;
+        width: 100%;
         cursor: pointer;
         transform: rotate(0deg);
         transition: all 0.3s $cubic;
         user-select: none;
         -webkit-tap-highlight-color: transparent;
-        
+        display: flex; 
+        justify-content: flex-end;
+
         #burger {
             width: 18px;
             height: 8px;
             position: relative;
             display: block;
             margin: -4px auto 0;
+            //margin-right: 30px;
+            margin: -4px 30px auto 0;
             top: 50%;
             .bar {
                 width: 100%;
-                height: 1px;
+                height: 2px;
                 display: block;
                 position: relative;
                 background: #FFF;
@@ -99,7 +103,7 @@ $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
         transition: all 0.3s ease-in/* , background 0.5s ease-in */;
         transition-delay: 0.25s;
         .burger-container { 
-            transform: rotate(90deg);
+            //transform: rotate(90deg);
             #burger {
                 .bar {
                     transition: all 0.4s $cubic;
